@@ -14,6 +14,27 @@ documents the booking and operations system built to run it.
 
 ---
 
+## Why this matters for operations
+
+- **Turned an informal, manual workflow into a standardized operating process** —
+  bookings that lived across direct messages and texts became one defined
+  intake with fixed services, durations and rules.
+- **Designed controls around scheduling, handoffs, failure states and
+  accountability** — travel buffers that cannot be double-booked, an approval
+  step separated from payment, holds that expire on their own, and an audit
+  record of every state change.
+- **Used testing and real-world observation to find root causes rather than
+  patch symptoms** — each incident below was traced to its origin and fixed
+  there, including two defects that automated tests passed over and that only
+  surfaced in real use.
+- **Learned an unfamiliar technology stack quickly enough to make sound
+  operating decisions and own the result** — enough to set buffers correctly,
+  choose an authentication approach on cost and security grounds, configure
+  the infrastructure, and defer a feature that would have shipped a scheduling
+  defect.
+
+---
+
 ## The business problem
 
 Bookings arrived as direct messages, texts and comments. That created four
@@ -33,9 +54,11 @@ judgement call made from a phone at the boat ramp.
 
 ## My role
 
-I am not a software engineer. I own this product and operate it.
+My role was product owner and operator. Implementation was AI-assisted; I
+owned the operating logic, requirements, infrastructure setup, review, testing
+and release decisions.
 
-**What I did:**
+**What that meant in practice:**
 
 - **Defined the operating model** — the service catalogue, session durations,
   travel and setup buffers, which days are open to online booking, how far
@@ -51,11 +74,11 @@ I am not a software engineer. I own this product and operate it.
 - **Cut scope deliberately** when expanding it would have shipped a known
   operational defect.
 
-**What I did not do:** write the implementation code. Claude Code wrote it,
-from my specifications, under my review. That division is the point of this
-case study — I treated an unfamiliar technology stack the way I would treat
-any unfamiliar operation: learn the constraints, define the process, direct
-the work, verify the result, and own the outcome.
+**On how it was built:** the implementation code was written by Claude Code,
+from my specifications and under my review. That division is deliberate and
+it is the point of this case study — I treated an unfamiliar technology stack
+the way I would treat any unfamiliar operation: learn the constraints, define
+the process, direct the work, verify the result, and own the outcome.
 
 ---
 
