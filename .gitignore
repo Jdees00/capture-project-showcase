@@ -1,0 +1,20 @@
+# Nothing from the production repository belongs here.
+.DS_Store
+._*
+Thumbs.db
+node_modules/
+*.log
+*.tmp
+
+# Guard rails: these must never appear in this repository at all.
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+wrangler.toml
+*service-account*.json
+*-key.json
+credentials.json
+*.pem
+*.key
+*.p12
